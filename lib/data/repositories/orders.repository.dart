@@ -25,6 +25,15 @@ class OrdersRepository {
     return data.map((json) => OrderModel.fromJson(json)).toList();
   }
 
+  Future<List<OrderModel>> getOrdersByBuyerId(String buyerId) async {
+    final response = await _client
+        .from('orders')
+        .select()
+        .eq('buyer_id', buyerId); // direct store_id link
+    final data = response as List<dynamic>;
+    return data.map((json) => OrderModel.fromJson(json)).toList();
+  }
+
   Future<OrderModel> insert(OrderModel data) async {
     final res = await _client.from(table).insert(data.toJson()).select().single();
     return OrderModel.fromJson(res);
