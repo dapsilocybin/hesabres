@@ -7,7 +7,7 @@ import 'theme_state.dart';
 class ThemeCubit extends Cubit<ThemeState> {
   ThemeCubit()
     : super(
-        ThemeState(mode: ThemeMode.system, seedColor: AppColorPresets.green),
+        ThemeState(mode: ThemeMode.system, seedColor: AppColorPresets.blue),
       );
 
   void setThemeMode(ThemeMode mode) => emit(state.copyWith(mode: mode));

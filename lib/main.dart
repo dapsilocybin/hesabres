@@ -9,7 +9,9 @@ import 'package:hesabres/presentation/screens/dashboard/dashboard_screen.dart';
 import 'package:hesabres/presentation/screens/payment_result/payment_result_screen.dart';
 import 'package:hesabres/presentation/screens/plan_details/plan_details_screen.dart';
 import 'package:hesabres/presentation/screens/plans/plans_screen.dart';
+import 'package:hesabres/presentation/screens/products/products_screen.dart';
 import 'package:hesabres/presentation/screens/splash/splash_screen.dart';
+import 'package:hesabres/presentation/screens/store/store_screen.dart';
 import 'package:hesabres/presentation/screens/stores/stores_screen.dart';
 
 import 'core/theme/theme_state.dart';
@@ -45,7 +47,7 @@ class MyApp extends StatelessWidget {
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
               ],
-              home: StoresScreen(),
+              home: ProductsScreen(),
             ),
           );
         },
